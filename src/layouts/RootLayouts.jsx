@@ -1,14 +1,13 @@
-import React from "react";
-import Navbar from "../sharedPages/Navbar1";
+
+import Navbar from "../sharedPages/Navbar";
 import { Outlet } from "react-router";
-import Nav from "../sharedPages/Navbar";
+
 
 const RootLayouts = () => {
   return (
     <div>
-     
       <div>
-        <Nav></Nav>
+        <Navbar></Navbar>
       </div>
       <Outlet></Outlet>
     </div>

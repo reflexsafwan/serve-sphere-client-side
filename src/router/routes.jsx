@@ -12,6 +12,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:3000/all-volunteer-Need"),
       },
       {
         path: "/login",
