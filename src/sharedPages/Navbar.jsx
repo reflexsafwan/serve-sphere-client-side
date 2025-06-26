@@ -8,7 +8,7 @@ const Navbar = () => {
   const links = (
     <>
       <Link to={"/"}>Home</Link>
-      <Link to={"/add-bolunteer"}>Add Volunteer</Link>
+      <Link to={"/add-volunteer"}>Add Volunteer</Link>
       {user && <Link to={"my-profile"}>MY Profile</Link>}
     </>
   );

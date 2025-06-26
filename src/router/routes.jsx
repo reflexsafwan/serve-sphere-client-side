@@ -3,6 +3,7 @@ import RootLayouts from "../layouts/RootLayouts";
 import Home from "../components/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import AddVolunteerPost from "../pages/AddVolunteerPost";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,12 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch("http://localhost:3000/all-volunteer-Need"),
       },
+
+      {
+        path: "/add-volunteer",
+        element: <AddVolunteerPost></AddVolunteerPost>,
+      },
+
       {
         path: "/login",
         element: <Login></Login>,
