@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const SingleVolunteerNeed = ({ post }) => {
   console.log(post);
@@ -137,9 +138,9 @@ const SingleVolunteerNeed = ({ post }) => {
           <h1 className="px-2 text-sm">{organizerEmail}</h1>
         </div>
         <div>
-          <button className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-thin">
+          <Link to={`/all-volunteer-Need/${_id}`} className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-thin">
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
