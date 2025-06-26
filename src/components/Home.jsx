@@ -4,7 +4,8 @@ import Hero from "./Hero";
 import { useLoaderData } from "react-router";
 
 const Home = () => {
-  const volunteerPosts = useLoaderData();
+  const volunteerPromise = useLoaderData();
+  const volunteerPosts = volunteerPromise.data;
   console.log(volunteerPosts);
   return (
     <div>

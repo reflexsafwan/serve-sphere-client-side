@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/Authcontext";
+import axios from "axios";
 
 const AddVolunteerPost = () => {
   const { user } = useContext(AuthContext);
@@ -11,6 +12,15 @@ const AddVolunteerPost = () => {
     newVolunteer.organizerEmail = user?.email;
     newVolunteer.organizerName = user?.displayName;
     console.log(newVolunteer);
+
+    axios
+      .post(
+        `${import.meta.env.VITE_API_URL}/add-volunteer-need-post`,
+        newVolunteer
+      )
+      .then((data) => {
+        console.log(data.data);
+      });
   };
 
   return (
