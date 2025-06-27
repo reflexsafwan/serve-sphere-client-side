@@ -19,12 +19,14 @@ const BecameVolunteer = () => {
     organizerEmail,
     _id,
   } = data.data;
+  console.log(volunteersNeeded);
 
   const handleVolunteer = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const volunteer = Object.fromEntries(formData.entries());
+    volunteer.postId = _id;
     console.log(volunteer);
 
     axios
@@ -32,7 +34,7 @@ const BecameVolunteer = () => {
       .then((data) => {
         Swal.fire({
           icon: "success",
-           title: "Good job!",
+          title: "Good job!",
           text: "Post Added succesfully",
           showConfirmButton: false,
           timer: 1500,
@@ -269,6 +271,7 @@ const BecameVolunteer = () => {
                     alt=""
                     className="w-10 h-10 rounded-full dark:bg-gray-600"
                   />
+
                   <button
                     type="submit"
                     className=" w-full px-4 py-2 border rounded-md border-blue-600 dark:border-gray-600 font-bold bg-blue-600 hover:bg-blue-500  hover:border-blue-500"

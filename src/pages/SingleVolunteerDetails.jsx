@@ -1,9 +1,8 @@
-import React   from "react";
-import {  Link, useLoaderData } from "react-router";
+import React from "react";
+import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../context/Authcontext";
 
 const SingleVolunteerDetails = () => {
-  
   const data = useLoaderData();
   const {
     category,
@@ -118,15 +117,31 @@ const SingleVolunteerDetails = () => {
             <h1 className="px-2 text-sm">{organizerEmail}</h1>
           </div>
           <div className="flex items-center gap-3 mt-4">
-           
             <h2> Organnizer Name : {organizerName}</h2>
           </div>
           <div>
-            <Link to={`/became-volunteer/${_id}`} className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-bold">
+            {/* <Link
+              to={`/became-volunteer/${_id}`}
+              className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-bold"
+            >
+              Became a Volunteer
+            </Link> */}
+            {volunteersNeeded > 0 ? (
+              <Link
+              to={`/became-volunteer/${_id}`}
+              className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-bold"
+            >
               Became a Volunteer
             </Link>
-
-            
+            ) : (
+              <button
+                disabled
+                type="submit"
+                className=" w-full px-4  mt-4 py-2 border rounded-md border-blue-600 dark:border-gray-600 font-bold bg-blue-600 hover:bg-blue-500  hover:border-blue-500"
+              >
+                No more volunteer Neeed ,Thanks
+              </button>
+            )}
           </div>
         </div>
       </div>
