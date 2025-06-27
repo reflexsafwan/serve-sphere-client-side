@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 import { AuthContext } from "../context/Authcontext";
+import Swal from "sweetalert2";
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
@@ -36,6 +37,13 @@ const AuthProvider = ({ children }) => {
 
   const logOut = async () => {
     setLoading(true);
+    Swal.fire({
+      icon: "success",
+      title: "Good job!",
+      text: "LogOut Successful",
+      showConfirmButton: false,
+      timer: 1500,
+    });
     return signOut(auth);
   };
 

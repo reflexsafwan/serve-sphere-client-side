@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import login from "../assets/login.jpg";
 import { AuthContext } from "../context/Authcontext";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signInWithGoogle, signIn } = useContext(AuthContext);
@@ -15,11 +16,23 @@ const Login = () => {
     try {
       await signInWithGoogle();
 
-      // toast.success("Signin Successful");
+      Swal.fire({
+        icon: "success",
+        title: "Good job!",
+        text: "Login Succesfully Done",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate("/");
     } catch (err) {
       console.log(err);
       // toast.error(err?.message);
+      Swal.fire({
+        icon: "error",
+        title: "You have an error ",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 
@@ -33,11 +46,23 @@ const Login = () => {
     try {
       //User Login
       await signIn(email, pass);
-      // toast.success('Signin Successful')
+      Swal.fire({
+        icon: "success",
+        title: "Good job!",
+        text: "Sign up Succesfully Done",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       navigate(from, { replace: true });
     } catch (err) {
       console.log(err);
       // toast.error(err?.message);
+      Swal.fire({
+        icon: "error",
+        title: "You have an error ",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   };
 

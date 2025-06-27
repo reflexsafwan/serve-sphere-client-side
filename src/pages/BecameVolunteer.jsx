@@ -32,7 +32,8 @@ const BecameVolunteer = () => {
       .then((data) => {
         Swal.fire({
           icon: "success",
-          title: "Thanks Became Volunteer",
+           title: "Good job!",
+          text: "Post Added succesfully",
           showConfirmButton: false,
           timer: 1500,
         });

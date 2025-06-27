@@ -2,35 +2,41 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router";
 import register from "../assets/register.jpg";
 import { AuthContext } from "../context/Authcontext";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const navigate = useNavigate();
   const { signInWithGoogle, createUser, updateUserProfile, setUser } =
     useContext(AuthContext);
 
-  const handleSignUp = async e => {
-    e.preventDefault()
-    const form = e.target
-    const email = form.email.value
-    const name = form.name.value
-    const photo = form.photo.value
-    const pass = form.password.value
-    console.log({ email, pass, name, photo })
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const pass = form.password.value;
+    console.log({ email, pass, name, photo });
     try {
       //2. User Registration
-      const result = await createUser(email, pass)
-      console.log(result)
-      await updateUserProfile(name, photo)
-      setUser({ ...result.user, photoURL: photo, displayName: name })
-    //   toast.success('Signup Successful')
-      navigate('/')
+      const result = await createUser(email, pass);
+      console.log(result);
+      await updateUserProfile(name, photo);
+      setUser({ ...result.user, photoURL: photo, displayName: name });
+      //   toast.success('Signup Successful')
+      Swal.fire({
+        icon: "success",
+        title: "Good job!",
+        text: "Signup Successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate("/");
     } catch (err) {
-      console.log(err)
-    //   toast.error(err?.message)
+      console.log(err);
+      //   toast.error(err?.message)
     }
-  }
-
-
+  };
 
   // Google Signin
   const handleGoogleSignIn = async () => {
@@ -38,6 +44,14 @@ const Register = () => {
       await signInWithGoogle();
 
       // toast.success("Signin Successful");
+      Swal.fire({
+        icon: "success",
+        title: "Good job!",
+        text: "Signin Successful",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+
       navigate("/");
     } catch (err) {
       console.log(err);

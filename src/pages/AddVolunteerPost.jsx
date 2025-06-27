@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/Authcontext";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddVolunteerPost = () => {
   const { user } = useContext(AuthContext);
@@ -20,6 +21,13 @@ const AddVolunteerPost = () => {
       )
       .then((data) => {
         console.log(data.data);
+        Swal.fire({
+          title: "Good job!",
+          text: "Post Added succesfully",
+          icon: "success",
+          showConfirmButton: false,
+           timer: 1500
+        });
       });
   };
 
@@ -337,7 +345,7 @@ const AddVolunteerPost = () => {
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="website" className="text-sm">
-                  Organizer Email 
+                  Organizer Email
                 </label>
                 <input
                   defaultValue={user?.email}
