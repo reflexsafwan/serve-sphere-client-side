@@ -8,15 +8,15 @@ const AddVolunteerPost = () => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const newVolunteer = Object.fromEntries(formData.entries());
-    newVolunteer.organizerEmail = user?.email;
-    newVolunteer.organizerName = user?.displayName;
-    console.log(newVolunteer);
+    const newVolunteerPost = Object.fromEntries(formData.entries());
+    newVolunteerPost.organizerEmail = user?.email;
+    newVolunteerPost.organizerName = user?.displayName;
+    console.log(newVolunteerPost);
 
     axios
       .post(
         `${import.meta.env.VITE_API_URL}/add-volunteer-need-post`,
-        newVolunteer
+        newVolunteerPost
       )
       .then((data) => {
         console.log(data.data);
@@ -324,7 +324,7 @@ const AddVolunteerPost = () => {
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="username" className="text-sm">
-                  Username
+                  Organizer Name
                 </label>
                 <input
                   defaultValue={user?.displayName}
@@ -337,7 +337,7 @@ const AddVolunteerPost = () => {
               </div>
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="website" className="text-sm">
-                  User Email
+                  Organizer Email 
                 </label>
                 <input
                   defaultValue={user?.email}
@@ -358,7 +358,7 @@ const AddVolunteerPost = () => {
                   />
                   <button
                     type="submit"
-                    className=" w-full px-4 py-2 border rounded-md border-gray-400 dark:border-gray-600 text-sm hover:bg-blue-600  hover:border-blue-600"
+                    className=" w-full px-4 py-2 border rounded-md border-blue-600 dark:border-gray-600 text-sm bg-blue-600 hover:bg-blue-500  hover:border-blue-500"
                   >
                     Add Volunteer Need
                   </button>

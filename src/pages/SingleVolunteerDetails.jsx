@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { Link, useLoaderData } from "react-router";
+import React   from "react";
+import {  Link, useLoaderData } from "react-router";
 import { AuthContext } from "../context/Authcontext";
 
 const SingleVolunteerDetails = () => {
-  const { user } = useContext(AuthContext);
+  
   const data = useLoaderData();
   const {
     category,
@@ -18,6 +18,7 @@ const SingleVolunteerDetails = () => {
     _id,
   } = data.data;
   console.log(data.data);
+
   return (
     <div className="p-4 md:p-6 lg:p-8">
       <div className="w-full   overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 ">
@@ -117,20 +118,15 @@ const SingleVolunteerDetails = () => {
             <h1 className="px-2 text-sm">{organizerEmail}</h1>
           </div>
           <div className="flex items-center gap-3 mt-4">
-            <img
-              src={user?.photoURL}
-              alt=""
-              className="w-8 h-8 rounded-full dark:bg-gray-600"
-            />
+           
             <h2> Organnizer Name : {organizerName}</h2>
           </div>
           <div>
-            <Link
-              to={`/all-volunteer-Need/${_id}`}
-              className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-thin"
-            >
-              View Details
+            <Link to={`/became-volunteer/${_id}`} className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-bold">
+              Became a Volunteer
             </Link>
+
+            
           </div>
         </div>
       </div>
