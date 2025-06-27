@@ -6,15 +6,12 @@ const SingleVolunteerNeed = ({ post }) => {
   const {
     category,
     thumbnail,
-    deadline,
     description,
     location,
     organizerEmail,
-    organizerName,
     postTitle,
-    volunteersNeeded,
-    _id
-  } = post;
+    _id,
+  } = post || {};
 
   return (
     // <div>
@@ -138,7 +135,10 @@ const SingleVolunteerNeed = ({ post }) => {
           <h1 className="px-2 text-sm">{organizerEmail}</h1>
         </div>
         <div>
-          <Link to={`/all-volunteer-Need/${_id}`} className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-thin">
+          <Link
+            to={`/all-volunteer-Need/${_id}`}
+            className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-thin"
+          >
             View Details
           </Link>
         </div>

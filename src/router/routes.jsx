@@ -8,6 +8,7 @@ import axios from "axios";
 import SingleVolunteerNeed from "../components/SingleVolunteerNeed";
 import SingleVolunteerDetails from "../pages/singleVolunteerDetails";
 import BecameVolunteer from "../pages/BecameVolunteer";
+import MyVolunteerNeedPosts from "../pages/MyVolunteerNeedPosts";
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,11 @@ export const router = createBrowserRouter([
             `${import.meta.env.VITE_API_URL}/all-volunteer-Need/${params.id}`
           ),
         element: <BecameVolunteer></BecameVolunteer>,
+      },
+      {
+        path: "/my-volunteer-need-post/",
+      
+        element: <MyVolunteerNeedPosts></MyVolunteerNeedPosts>,
       },
 
       {

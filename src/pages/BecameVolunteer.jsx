@@ -18,7 +18,7 @@ const BecameVolunteer = () => {
     organizerName,
     organizerEmail,
     _id,
-  } = data.data;
+  } = data.data || {};
   console.log(volunteersNeeded);
 
   const handleVolunteer = (e) => {

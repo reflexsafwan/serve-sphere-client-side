@@ -15,7 +15,7 @@ const SingleVolunteerDetails = () => {
     organizerName,
     organizerEmail,
     _id,
-  } = data.data;
+  } = data.data || {}
   console.log(data.data);
 
   return (

@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { AuthContext } from "../context/Authcontext";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 const AddVolunteerPost = () => {
+  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const handleAddVolunteer = (e) => {
     e.preventDefault();
@@ -26,8 +28,12 @@ const AddVolunteerPost = () => {
           text: "Post Added succesfully",
           icon: "success",
           showConfirmButton: false,
-           timer: 1500
+          timer: 1500,
         });
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 

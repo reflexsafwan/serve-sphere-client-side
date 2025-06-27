@@ -8,8 +8,14 @@ const Navbar = () => {
   const links = (
     <>
       <Link to={"/"}>Home</Link>
-     {user &&  <Link to={"/add-volunteer"}>Add Volunteer</Link>}
-      {user && <Link to={"my-profile"}>MY Profile</Link>}
+      <Link to={"/"}>All Volunteer Posts</Link>
+
+      {user && <Link to={"/add-volunteer"}>Add Volunteer</Link>}
+      {user && <Link to={"/my-profile"}>MY Profile</Link>}
+      {user && (
+        <Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>
+      )}
+      {user && <Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
     </>
   );
   return (
