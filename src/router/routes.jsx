@@ -11,11 +11,15 @@ import BecameVolunteer from "../pages/BecameVolunteer";
 import MyVolunteerNeedPosts from "../pages/MyVolunteerNeedPosts";
 import UpdateVolunteerNeedPost from "../pages/UpdateVolunteerNeedPost";
 import MyVolunteerRequest from "../pages/MyVolunteerRequest";
+import ManageMyPost from "../pages/ManageMyPost";
+import PrivateRoute from "./PrivateRoute";
+import Loading from "../components/Loading";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayouts></RootLayouts>,
+    hydrateFallbackElement: <Loading></Loading>,
     children: [
       {
         index: true,
@@ -27,7 +31,11 @@ export const router = createBrowserRouter([
 
       {
         path: "/add-volunteer",
-        element: <AddVolunteerPost></AddVolunteerPost>,
+        element: (
+          <PrivateRoute>
+            <AddVolunteerPost></AddVolunteerPost>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/all-volunteer-Need/:id",
@@ -38,16 +46,32 @@ export const router = createBrowserRouter([
         element: <SingleVolunteerDetails></SingleVolunteerDetails>,
       },
       {
+        path: "/manage-my-post",
+        element: (
+          <PrivateRoute>
+            <ManageMyPost></ManageMyPost>
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/became-volunteer/:id",
         loader: ({ params }) =>
           axios(
             `${import.meta.env.VITE_API_URL}/all-volunteer-Need/${params.id}`
           ),
-        element: <BecameVolunteer></BecameVolunteer>,
+        element: (
+          <PrivateRoute>
+            <BecameVolunteer></BecameVolunteer>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-volunteer-need-post/",
-        element: <MyVolunteerNeedPosts></MyVolunteerNeedPosts>,
+        element: (
+          <PrivateRoute>
+            <MyVolunteerNeedPosts></MyVolunteerNeedPosts>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/update-volunteer-need-post/:id",
@@ -55,11 +79,19 @@ export const router = createBrowserRouter([
           axios(
             `${import.meta.env.VITE_API_URL}/all-volunteer-Need/${params.id}`
           ),
-        element: <UpdateVolunteerNeedPost></UpdateVolunteerNeedPost>,
+        element: (
+          <PrivateRoute>
+            <UpdateVolunteerNeedPost></UpdateVolunteerNeedPost>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-volunteer-request",
-        element: <MyVolunteerRequest></MyVolunteerRequest>,
+        element: (
+          <PrivateRoute>
+            <MyVolunteerRequest></MyVolunteerRequest>
+          </PrivateRoute>
+        ),
       },
 
       {

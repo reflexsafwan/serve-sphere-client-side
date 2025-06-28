@@ -49,7 +49,6 @@ const MyVolunteerNeedPosts = () => {
 
   return (
     <>
-      {myPosts.length > 0 ? "data ase" : "data nai"}
       <section className="container px-4 mx-auto">
         <div className="flex flex-col mt-6">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -63,7 +62,7 @@ const MyVolunteerNeedPosts = () => {
                         className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                       >
                         <div className="flex items-center gap-x-3">
-                          <span>Organizer Info</span>
+                          <span>User Info</span>
                         </div>
                       </th>
                       <th

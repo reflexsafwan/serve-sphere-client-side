@@ -9,13 +9,8 @@ const Navbar = () => {
     <>
       <Link to={"/"}>Home</Link>
       <Link to={"/"}>All Volunteer Posts</Link>
-
-      {user && <Link to={"/add-volunteer"}>Add Volunteer</Link>}
-      {user && <Link to={"/my-profile"}>MY Profile</Link>}
-      {user && (
-        <Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>
-      )}
-      {user && <Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
+      {<Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>}
+      {<Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
     </>
   );
   return (
@@ -88,10 +83,22 @@ const Navbar = () => {
                 <li>
                   <h2 className="text-xl font-bold"> {user?.displayName}</h2>
                 </li>
+                <Link
+                  to={"/add-volunteer"}
+                  className=" block text-center p-2 hover:bg-blue-500 rounded"
+                >
+                  Add Volunteer need Post
+                </Link>
+                <Link
+                  to={"/manage-my-post"}
+                  className=" block text-center p-2 mb-1  hover:bg-blue-500 rounded"
+                >
+                  Manage My Post
+                </Link>
                 <li>
                   <button
                     onClick={logOut}
-                    className="bg-gray-400 block text-center"
+                    className="bg-gray-400 block text-center hover:bg-red-500"
                   >
                     Logout
                   </button>

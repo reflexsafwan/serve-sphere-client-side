@@ -23,7 +23,8 @@ const Login = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      navigate("/");
+      // navigate("/");
+      navigate(`${location.state ? location.state : "/"}`)
     } catch (err) {
       console.log(err);
       // toast.error(err?.message);
@@ -53,7 +54,8 @@ const Login = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      navigate(from, { replace: true });
+      // navigate(from, { replace: true });
+       navigate(`${location.state ? location.state : "/"}`);
     } catch (err) {
       console.log(err);
       // toast.error(err?.message);
