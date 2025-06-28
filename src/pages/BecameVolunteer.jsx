@@ -67,7 +67,7 @@ const BecameVolunteer = () => {
                   Select Your Volunteer Category
                 </label>
                 <select
-                  readOnly
+                  disabled
                   defaultValue={category}
                   name="category"
                   required

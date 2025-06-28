@@ -14,13 +14,15 @@ const AddVolunteerPost = () => {
     const newVolunteerPost = Object.fromEntries(formData.entries());
     newVolunteerPost.organizerEmail = user?.email;
     newVolunteerPost.organizerName = user?.displayName;
+
     console.log(newVolunteerPost);
+    console.log(newVolunteerPost.volunteersNeeded);
 
     axios
-      .post(
-        `${import.meta.env.VITE_API_URL}/add-volunteer-need-post`,
-        newVolunteerPost
-      )
+      .post(`${import.meta.env.VITE_API_URL}/add-volunteer-need-post`, {
+        ...newVolunteerPost,
+        volunteersNeeded: parseInt(newVolunteerPost.volunteersNeeded),
+      })
       .then((data) => {
         console.log(data.data);
         Swal.fire({
