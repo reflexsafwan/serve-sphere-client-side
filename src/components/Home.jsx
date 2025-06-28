@@ -2,6 +2,7 @@ import AllVolunteerNeed from "./AllVolunteerNeed";
 import Hero from "./Hero";
 
 import { useLoaderData } from "react-router";
+import VolunteerPostsForHome from "./VolunteerPostsForHome";
 
 const Home = () => {
   const volunteerPromise = useLoaderData();
@@ -10,7 +11,8 @@ const Home = () => {
   return (
     <div>
       <Hero></Hero>
-      <AllVolunteerNeed></AllVolunteerNeed>
+      {/* <AllVolunteerNeed></AllVolunteerNeed> */}
+      <VolunteerPostsForHome></VolunteerPostsForHome>
     </div>
   );
 };
