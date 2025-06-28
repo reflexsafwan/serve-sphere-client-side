@@ -14,6 +14,7 @@ import MyVolunteerRequest from "../pages/MyVolunteerRequest";
 import ManageMyPost from "../pages/ManageMyPost";
 import PrivateRoute from "./PrivateRoute";
 import Loading from "../components/Loading";
+import AllVolunteerNeed from "../components/AllVolunteerNeed";
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +29,13 @@ export const router = createBrowserRouter([
         loader: () =>
           axios(`${import.meta.env.VITE_API_URL}/all-volunteer-Need`),
       },
-
+      {
+        path: "/all-volunteer-need-posts",
+        loader: () =>
+          axios(`${import.meta.env.VITE_API_URL}/all-volunteer-Need`),
+        element: <AllVolunteerNeed></AllVolunteerNeed>,
+      },
+  
       {
         path: "/add-volunteer",
         element: (

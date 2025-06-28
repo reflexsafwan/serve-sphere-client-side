@@ -8,7 +8,7 @@ const Navbar = () => {
   const links = (
     <>
       <Link to={"/"}>Home</Link>
-      <Link to={"/"}>All Volunteer Posts</Link>
+      <Link to={"/all-volunteer-need-posts"}>All Volunteer Posts</Link>
       {<Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>}
       {<Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
     </>

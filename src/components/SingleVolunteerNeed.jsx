@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const SingleVolunteerNeed = ({ post }) => {
-  console.log(post);
+  
   const {
     category,
     thumbnail,
