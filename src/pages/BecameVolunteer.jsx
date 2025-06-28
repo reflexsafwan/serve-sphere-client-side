@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import { AuthContext } from "../context/Authcontext";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 const BecameVolunteer = () => {
   const data = useLoaderData();
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
   const {
     category,
     thumbnail,
@@ -35,10 +36,11 @@ const BecameVolunteer = () => {
         Swal.fire({
           icon: "success",
           title: "Good job!",
-          text: "Post Added succesfully",
+          text: "Thanks For Request",
           showConfirmButton: false,
           timer: 1500,
         });
+        navigate("/my-volunteer-request");
       });
   };
 
