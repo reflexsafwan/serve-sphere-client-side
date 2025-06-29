@@ -15,12 +15,14 @@ import ManageMyPost from "../pages/ManageMyPost";
 import PrivateRoute from "./PrivateRoute";
 import Loading from "../components/Loading";
 import AllVolunteerNeed from "../components/AllVolunteerNeed";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayouts></RootLayouts>,
     hydrateFallbackElement: <Loading></Loading>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
