@@ -3,19 +3,24 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/Authcontext";
 import TableRow from "../components/TableRow";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const MyVolunteerNeedPosts = () => {
-  const [myPosts, setMyPosts] = useState();
+  const [myPosts, setMyPosts] = useState([]);
   const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
 
   console.log(myPosts);
   useEffect(() => {
-    axios(
-      `${import.meta.env.VITE_API_URL}/my-volunteer-posts/${user?.email}`
-    ).then((data) => {
-      setMyPosts(data.data);
-    });
-  }, [user?.email]);
+    axiosSecure(`/my-volunteer-posts/${user?.email}`)
+      .then((data) => {
+        console.log(data.data);
+        setMyPosts(data?.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [user, axiosSecure]);
 
   const handleDelete = (id) => {
     Swal.fire({

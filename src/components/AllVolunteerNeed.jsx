@@ -28,7 +28,7 @@ const AllVolunteerNeed = () => {
           Time ."
         </h2>
         <p className="text-gray-400 mt-8 text-2xl font-thin">
-          Authoritatively create covalent materials and innovative results.{" "}
+          Authoritatively create covalent materials and innovative results.
           <br />
           Continually disseminate alternative ROI rather than.
         </p>

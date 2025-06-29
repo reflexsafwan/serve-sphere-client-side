@@ -3,19 +3,21 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/Authcontext";
 import RequestTableRow from "../components/RequestTableRow";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const MyVolunteerRequest = () => {
   const { user } = useContext(AuthContext);
 
   const [myRequest, setMyRequest] = useState();
+  const axiosSecure = useAxiosSecure()
 
   useEffect(() => {
-    axios(
+    axiosSecure(
       `${import.meta.env.VITE_API_URL}/my-volunteer-request/${user?.email}`
     ).then((data) => {
       setMyRequest(data.data);
     });
-  }, [user?.email]);
+  }, [user,axiosSecure]);
 
   //   handle volunteer request delete
   const handleDelete = (id) => {

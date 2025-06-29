@@ -12,6 +12,7 @@ import {
 import { app } from "../firebase/firebase.config";
 import { AuthContext } from "../context/Authcontext";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
@@ -58,6 +59,21 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      if (currentUser?.email) {
+        axios
+          .post(
+            `${import.meta.env.VITE_API_URL}/jwt`,
+            {
+              email: currentUser?.email,
+            },
+            {
+              withCredentials: true,
+            }
+          )
+          .then((res) => {
+            console.log(res.data);
+          });
+      }
       console.log("CurrentUser-->", currentUser);
       setLoading(false);
     });

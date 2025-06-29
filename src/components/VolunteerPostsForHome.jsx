@@ -26,8 +26,8 @@ const VolunteerPostsForHome = () => {
   //       setVolunteerNeedsData(VolunteerNeedsData.slice(0, 6));
   //     }
   //   }, [VolunteerNeedsData, showAll]);
-  console.log(VolunteerNeedsData);
-  console.log(VolunteerNeedsData);
+
+  // console.log(VolunteerNeedsData);
   return (
     <div>
       <div>

@@ -26,13 +26,13 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home></Home>,
         // loader: () => fetch("http://localhost:3000/all-volunteer-Need"),
-        loader: () =>
-          axios(`${import.meta.env.VITE_API_URL}/all-volunteer-Need`),
+        // loader: () =>
+        //   axios(`${import.meta.env.VITE_API_URL}/all-volunteer-Need`),
       },
       {
         path: "/all-volunteer-need-posts",
-        loader: () =>
-          axios(`${import.meta.env.VITE_API_URL}/all-volunteer-Need`),
+        // loader: () =>
+        //   axios(`${import.meta.env.VITE_API_URL}/all-volunteer-Need`),
         element: <AllVolunteerNeed></AllVolunteerNeed>,
       },
   
