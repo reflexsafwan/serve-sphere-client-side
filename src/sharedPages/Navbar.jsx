@@ -9,8 +9,10 @@ const Navbar = () => {
     <>
       <Link to={"/"}>Home</Link>
       <Link to={"/all-volunteer-need-posts"}>All Volunteer Posts</Link>
-      {<Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>}
-      {<Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
+      {user && (
+        <Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>
+      )}
+      {user && <Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
     </>
   );
   return (
@@ -43,7 +45,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2 text-xl">
             <img className="w-8 rounded-full" src={logo} alt="" />
-            <h2 className="text-xl font-bold">ServeSphere</h2>
+            <h2 className="md:text-xl md:font-bold">ServeSphere</h2>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -54,15 +56,18 @@ const Navbar = () => {
         <div className="navbar-end">
           {!user && (
             <div>
-              <ul>
+              <ul className="flex gap-4">
                 <li>
                   <Link to={"/login"}>Login</Link>
+                </li>
+                <li>
+                  <Link to={"/register"}>Register</Link>
                 </li>
               </ul>
             </div>
           )}
           {user && (
-            <div className="dropdown dropdown-hover dropdown-bottom dropdown-end">
+            <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ">
               <div tabIndex={0} role="button" className=" m-1">
                 <div
                   title={user?.displayName}

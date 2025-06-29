@@ -24,13 +24,14 @@ const Login = () => {
         timer: 1500,
       });
       // navigate("/");
-      navigate(`${location.state ? location.state : "/"}`)
+      navigate(`${location.state ? location.state : "/"}`);
     } catch (err) {
       console.log(err);
+
       // toast.error(err?.message);
       Swal.fire({
         icon: "error",
-        title: "You have an error ",
+        title: "You have an error",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -55,13 +56,14 @@ const Login = () => {
         timer: 1500,
       });
       // navigate(from, { replace: true });
-       navigate(`${location.state ? location.state : "/"}`);
+      navigate(`${location.state ? location.state : "/"}`);
     } catch (err) {
       console.log(err);
       // toast.error(err?.message);
+
       Swal.fire({
         icon: "error",
-        title: "You have an error ",
+        title: "You have an error  ",
         showConfirmButton: false,
         timer: 1500,
       });

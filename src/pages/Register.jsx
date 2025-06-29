@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import register from "../assets/register.jpg";
 import { AuthContext } from "../context/Authcontext";
 import Swal from "sweetalert2";
 
 const Register = () => {
+  const [passowrdError, setPasswordError] = useState("");
   const navigate = useNavigate();
   const { signInWithGoogle, createUser, updateUserProfile, setUser } =
     useContext(AuthContext);
@@ -16,6 +17,24 @@ const Register = () => {
     const name = form.name.value;
     const photo = form.photo.value;
     const pass = form.password.value;
+    // Password validation
+    if (pass.length < 6) {
+      setPasswordError("Password must be at least 6 characters long.");
+      return;
+    }
+    if (!/[A-Z]/.test(pass)) {
+      setPasswordError("Password must contain at least one uppercase letter.");
+      return;
+    }
+    if (!/[a-z]/.test(pass)) {
+      setPasswordError("Password must contain at least one lowercase letter.");
+      return;
+    }
+
+    if (!/[0-9]/.test(pass)) {
+      setPasswordError("Password must contain at least one number.");
+      return;
+    }
     console.log({ email, pass, name, photo });
     try {
       //2. User Registration
@@ -37,7 +56,7 @@ const Register = () => {
       Swal.fire({
         icon: "error",
         title: "Opps",
-        text: {err},
+        text: { err },
         showConfirmButton: false,
         timer: 1500,
       });
@@ -68,9 +87,7 @@ const Register = () => {
     <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-12">
       <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl ">
         <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
-          <div className="flex justify-center mx-auto">
-            
-          </div>
+          <div className="flex justify-center mx-auto"></div>
 
           <p className="mt-3 text-xl text-center text-gray-600 ">
             Get Your Free Account Now.
@@ -183,6 +200,7 @@ const Register = () => {
                 className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg    focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300"
                 type="password"
               />
+              <p className="text-red-500 mb-2 ">{passowrdError}</p>
             </div>
             <div className="mt-6">
               <button
