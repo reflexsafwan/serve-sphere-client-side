@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
+import { motion, scale } from "motion/react";
 
 const SingleVolunteerNeed = ({ post }) => {
-  
   const {
     category,
     thumbnail,
@@ -134,14 +134,19 @@ const SingleVolunteerNeed = ({ post }) => {
           </svg>
           <h1 className="px-2 text-sm">{organizerEmail}</h1>
         </div>
-        <div>
+        <motion.div
+          initial={{ x: -100 }}
+        
+          transition={{ type: "spring", stiffness: 120, delay: 0.2,}}
+          whileInView={{x:0,}}
+        >
           <Link
             to={`/all-volunteer-Need/${_id}`}
             className="btn w-full mt-4 bg-[#EB5971]  text-xl font-thin"
           >
             View Details
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

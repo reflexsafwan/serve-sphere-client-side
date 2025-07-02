@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./carousel/Carousel";
 import { Link } from "react-router";
+import { motion, spring } from "motion/react";
 
 const Hero = () => {
   return (
@@ -10,11 +11,22 @@ const Hero = () => {
           <div className="items-center lg:flex">
             <div className="w-full lg:w-1/2">
               <div className="lg:max-w-lg">
-                <h1 className="text-3xl font-semibold dark:text-gray-600 text-red-400 lg:text-4xl">
-                  Your <span className="text-[#FF637D]">Time</span> Can Be <br />
+                <motion.h1
+                  initial={{ x: "-100vw" }}
+                  animate={{ x: 0 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 120,
+                    delay: 0.2,
+                 
+                  }}
+                  className="text-3xl font-semibold dark:text-gray-600 text-red-400 lg:text-4xl"
+                >
+                  Your <span className="text-[#FF637D]">Time</span> Can Be
+                  <br />
                   Someone’s
                   <span className="text-[#FF637D]"> Lifeline</span>
-                </h1>
+                </motion.h1>
 
                 <p className="mt-3 text-gray-600 dark:text-gray-400">
                   We’re seeking passionate volunteers to support meaningful

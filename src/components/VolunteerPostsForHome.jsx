@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import SingleVolunteerNeed from "./SingleVolunteerNeed";
+import { motion } from "motion/react";
 
 const VolunteerPostsForHome = () => {
   const [VolunteerNeedsData, setVolunteerNeedsData] = useState();
@@ -27,7 +28,6 @@ const VolunteerPostsForHome = () => {
   //     }
   //   }, [VolunteerNeedsData, showAll]);
 
-
   return (
     <div>
       <div>
@@ -53,14 +53,14 @@ const VolunteerPostsForHome = () => {
             ></SingleVolunteerNeed>
           ))}
         </div>
-        <div className="flex justify-center ">
+        <motion.div className="flex justify-center ">
           <button
             className="btn mb-4 bg-[#EB5971] hover:bg-[#EB5971] w-xl font-bold text-xl"
             onClick={() => setShowAll((prv) => !prv)}
           >
             {showAll ? "Show Less" : "Show All"}
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
