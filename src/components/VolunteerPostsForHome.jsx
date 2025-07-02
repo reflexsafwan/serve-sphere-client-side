@@ -27,7 +27,7 @@ const VolunteerPostsForHome = () => {
   //     }
   //   }, [VolunteerNeedsData, showAll]);
 
-  console.log(VolunteerNeedsData);
+
   return (
     <div>
       <div>

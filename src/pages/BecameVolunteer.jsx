@@ -20,15 +20,14 @@ const BecameVolunteer = () => {
     organizerEmail,
     _id,
   } = data.data || {};
-  console.log(volunteersNeeded);
-
+ 
   const handleVolunteer = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const volunteer = Object.fromEntries(formData.entries());
     volunteer.postId = _id;
-    console.log(volunteer);
+ 
 
     axios
       .post(`${import.meta.env.VITE_API_URL}/volunteers`, volunteer)

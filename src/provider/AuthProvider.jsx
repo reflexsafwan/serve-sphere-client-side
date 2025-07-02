@@ -71,10 +71,10 @@ const AuthProvider = ({ children }) => {
             }
           )
           .then((res) => {
-            console.log(res.data);
+          
           });
       }
-      console.log("CurrentUser-->", currentUser);
+     
       setLoading(false);
     });
     return () => {

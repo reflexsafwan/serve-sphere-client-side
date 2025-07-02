@@ -20,16 +20,14 @@ const AddVolunteerPost = () => {
     newVolunteerPost.organizerEmail = user?.email;
     newVolunteerPost.organizerName = user?.displayName;
 
-    console.log(newVolunteerPost);
-    console.log(newVolunteerPost.volunteersNeeded);
-
+  
     axios
       .post(`${import.meta.env.VITE_API_URL}/add-volunteer-need-post`, {
         ...newVolunteerPost,
         volunteersNeeded: parseInt(newVolunteerPost.volunteersNeeded),
       })
       .then((data) => {
-        console.log(data.data);
+   
         Swal.fire({
           title: "Good job!",
           text: "Post Added succesfully",

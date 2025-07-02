@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const TableRow = ({ post, handleDelete }) => {
   const { user } = useContext(AuthContext);
-  console.log(post);
+
   const {
     category,
     thumbnail,

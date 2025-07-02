@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state || "/";
-  console.log(from);
+
 
   // Google Signin
   const handleGoogleSignIn = async () => {
@@ -44,7 +44,7 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const pass = form.password.value;
-    console.log({ email, pass });
+   
     try {
       //User Login
       await signIn(email, pass);

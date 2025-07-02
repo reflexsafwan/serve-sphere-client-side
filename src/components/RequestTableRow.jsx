@@ -18,7 +18,7 @@ const RequestTableRow = ({ rqst, handleDelete }) => {
     thumbnail,
     _id,
   } = rqst || {};
-  console.log("volunteer request data", rqst);
+  
 
   return (
     <>

@@ -37,7 +37,7 @@ const UpdateVolunteerNeedPost = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+ 
         Swal.fire({
           title: "Good job!",
           text: "Post Updated succesfully",

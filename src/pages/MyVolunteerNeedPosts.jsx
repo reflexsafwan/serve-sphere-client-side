@@ -11,11 +11,11 @@ const MyVolunteerNeedPosts = () => {
   const { user } = useContext(AuthContext);
   const axiosSecure = useAxiosSecure();
 
-  console.log(myPosts);
+
   useEffect(() => {
     axiosSecure(`/my-volunteer-posts/${user?.email}`)
       .then((data) => {
-        console.log(data.data);
+       
         setMyPosts(data?.data);
       })
       .catch((err) => {
