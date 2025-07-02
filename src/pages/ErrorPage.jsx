@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const ErrorPage = () => {
   return (
-    <section className="flex items-center h-screen p-16 dark:bg-gray-50 dark:text-gray-800">
+    <section className="flex items-center h-screen p-16 light:bg-gray-50 light:text-gray-800">
       <div
         className="container flex flex-col items-center justify-center px-5 mx-auto my-8"
         bis_skin_checked="1"

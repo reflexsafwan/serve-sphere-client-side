@@ -1,9 +1,10 @@
-
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/Authcontext";
 import TableRow from "../components/TableRow";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import ErrorPage from "./ErrorPage";
+import NoDataFound from "./NoDataFound";
 
 const MyVolunteerNeedPosts = () => {
   const [myPosts, setMyPosts] = useState([]);
@@ -52,9 +53,13 @@ const MyVolunteerNeedPosts = () => {
     });
   };
 
+  if (myPosts.length === 0) {
+    return <NoDataFound></NoDataFound>
+  }
+
   return (
     <>
-      <section className="container px-4 mx-auto">
+      <section className="container px-4 mx-auto ">
         <div className="flex flex-col mt-6">
           <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">

@@ -1,18 +1,19 @@
 import React from "react";
 import Carousel from "./carousel/Carousel";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
     <>
-      <div className="bg-white dark:bg-gray-900">
+      <div className="dark:bg-gray-00 light:bg-gray-50 dark:text-gray-600">
         <div className="container px-6 py-16 mx-auto">
           <div className="items-center lg:flex">
             <div className="w-full lg:w-1/2">
               <div className="lg:max-w-lg">
-                <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
-                  Your <span className="text-blue-500">Time</span> Can Be <br />
+                <h1 className="text-3xl font-semibold dark:text-gray-600 text-red-400 lg:text-4xl">
+                  Your <span className="text-[#FF637D]">Time</span> Can Be <br />
                   Someone’s
-                  <span className="text-blue-500"> Lifeline</span>
+                  <span className="text-[#FF637D]"> Lifeline</span>
                 </h1>
 
                 <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -21,7 +22,7 @@ const Hero = () => {
                   difference
                 </p>
 
-                <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-blue-600 rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                <button className="w-full px-5 py-2 mt-6 text-sm tracking-wider text-white uppercase transition-colors duration-300 transform bg-[#EB5971] rounded-lg lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
                   Became a Volunteer
                 </button>
               </div>

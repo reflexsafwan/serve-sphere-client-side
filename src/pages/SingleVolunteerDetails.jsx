@@ -128,7 +128,7 @@ const SingleVolunteerDetails = () => {
             {volunteersNeeded > 0 ? (
               <Link
                 to={`/became-volunteer/${_id}`}
-                className="btn  w-full mt-4 bg-[#2B7FFF]  md:text-xl font-bold"
+                className="btn  w-full mt-4 bg-[#EB5971]  md:text-xl font-bold"
               >
                 Became a Volunteer
               </Link>
@@ -136,7 +136,7 @@ const SingleVolunteerDetails = () => {
               <button
                 disabled
                 type="submit"
-                className=" w-full px-4  mt-4 py-2 border rounded-md border-blue-600 dark:border-gray-600 font-bold bg-blue-600 hover:bg-blue-500  hover:border-blue-500"
+                className=" w-full px-4  mt-4 py-2 border rounded-md border-[#EB5971] dark:border-gray-600 font-bold bg-[#EB5971] hover:[#EB5971]  hover:border-[#EB5971]"
               >
                 No more volunteer Neeed ,Thanks
               </button>

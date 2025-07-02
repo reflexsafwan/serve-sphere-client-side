@@ -46,7 +46,7 @@ const SingleVolunteerNeed = ({ post }) => {
 
     // merakiUi
 
-    <div className="w-full overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+    <div className="w-full overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 dark:bg-gray-00 light:bg-gray-50 dark:text-gray-600">
       <img
         className="object-cover object-center w-full h-56"
         src={thumbnail}
@@ -137,7 +137,7 @@ const SingleVolunteerNeed = ({ post }) => {
         <div>
           <Link
             to={`/all-volunteer-Need/${_id}`}
-            className="btn w-full mt-4 bg-[#2B7FFF] text-xl font-thin"
+            className="btn w-full mt-4 bg-[#EB5971]  text-xl font-thin"
           >
             View Details
           </Link>

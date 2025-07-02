@@ -1,15 +1,16 @@
-
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/Authcontext";
 import RequestTableRow from "../components/RequestTableRow";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import ErrorPage from "./ErrorPage";
+import NoDataFound from "./NoDataFound";
 
 const MyVolunteerRequest = () => {
   const { user } = useContext(AuthContext);
 
-  const [myRequest, setMyRequest] = useState();
-  const axiosSecure = useAxiosSecure()
+  const [myRequest, setMyRequest] = useState([]);
+  const axiosSecure = useAxiosSecure();
 
   useEffect(() => {
     axiosSecure(
@@ -17,7 +18,7 @@ const MyVolunteerRequest = () => {
     ).then((data) => {
       setMyRequest(data.data);
     });
-  }, [user,axiosSecure]);
+  }, [user, axiosSecure]);
 
   //   handle volunteer request delete
   const handleDelete = (id) => {
@@ -49,7 +50,9 @@ const MyVolunteerRequest = () => {
       }
     });
   };
-
+  if (myRequest.length === 0) {
+    return <NoDataFound></NoDataFound>
+  }
 
   return (
     <section className="container px-4 mx-auto">

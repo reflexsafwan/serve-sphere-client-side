@@ -1,9 +1,9 @@
 import React from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slider1 from "../../assets/slider1.jpg"
-import slider2 from "../../assets/slider2.jpg"
-import slider3 from "../../assets/slider3.jpg"
+import slider1 from "../../assets/slider1.jpg";
+import slider2 from "../../assets/slider2.jpg";
+import slider3 from "../../assets/slider3.jpg";
 
 // import '../carousel/style.css'
 import "swiper/css";
@@ -36,7 +36,7 @@ const Carousel = () => {
         <SwiperSlide>
           <img
             className="w-full h-full lg:max-w-3xl"
-           src={slider2}
+            src={slider2}
             alt="Catalogue Illustration"
           />
         </SwiperSlide>
@@ -47,7 +47,6 @@ const Carousel = () => {
             alt="Catalogue Illustration"
           />
         </SwiperSlide>
-        
       </Swiper>
     </>
   );

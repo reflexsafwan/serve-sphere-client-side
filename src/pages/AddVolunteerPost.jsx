@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/Authcontext";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const AddVolunteerPost = () => {
   const navigate = useNavigate();
+  const [startDate, setStartDate] = useState(new Date());
 
   const { user } = useContext(AuthContext);
   const handleAddVolunteer = (e) => {
@@ -302,17 +306,23 @@ const AddVolunteerPost = () => {
                   className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
                 />
               </div>
-              <div className="col-span-full sm:col-span-3">
+              <div className="col-span-full sm:col-span-3 gap-x-2 ">
                 <label htmlFor="address" className="text-sm">
-                  Deadline
+                  Deadline :
                 </label>
-                <input
+                {/* <input
                   required
                   name="deadline"
                   id="address"
                   type="date"
                   placeholder="Address"
                   className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
+                /> */}
+                <DatePicker
+                  name="deadline"
+                  className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 focus:ring focus:ring-violet-500 focus:ring-opacity-50 ml-4"
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -377,7 +387,7 @@ const AddVolunteerPost = () => {
                     type="submit"
                     className=" w-full px-4 py-2 border rounded-md border-blue-600 dark:border-gray-600 text-sm bg-blue-600 hover:bg-blue-500  hover:border-blue-500"
                   >
-                    Add Volunteer Need 
+                    Add Volunteer Need
                   </button>
                 </div>
               </div>

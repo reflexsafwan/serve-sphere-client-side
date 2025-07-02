@@ -67,7 +67,7 @@ const BecameVolunteer = () => {
                   Select Your Volunteer Category
                 </label>
                 <select
-                  disabled
+                  readOnly
                   defaultValue={category}
                   name="category"
                   required
@@ -276,7 +276,7 @@ const BecameVolunteer = () => {
 
                   <button
                     type="submit"
-                    className=" w-full px-2 md:px-4 py-1 md:py-2 text-sm md:text-xl border rounded-md border-blue-600 dark:border-gray-600 font-bold bg-blue-600 hover:bg-blue-500  hover:border-blue-500"
+                    className=" w-full px-2 md:px-4 py-1 md:py-2 text-sm md:text-xl border rounded-md border-blue-600 dark:border-gray-600 font-bold bg-[#EB5971] hover:bg-[#EB5971]  hover:border-[#EB5971]"
                   >
                     Request to Became a Volunteer
                   </button>

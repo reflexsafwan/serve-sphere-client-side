@@ -23,7 +23,7 @@ const TableRow = ({ post, handleDelete }) => {
   return (
     <>
       <tr>
-        <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+        <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap ">
           <div className="inline-flex items-center gap-x-3">
             <div className="flex items-center gap-x-2">
               <img

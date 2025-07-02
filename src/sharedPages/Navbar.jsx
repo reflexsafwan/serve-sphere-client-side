@@ -1,18 +1,58 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/Authcontext";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import logo from "../assets/logo1.png";
+import ThemeToggle from "../components/ThemeToggle";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const links = (
     <>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/all-volunteer-need-posts"}>All Volunteer Posts</Link>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
+            : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+        }
+        to={"/"}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
+            : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+        }
+        to={"/all-volunteer-need-posts"}
+      >
+        All Volunteer Posts
+      </NavLink>
+
       {user && (
-        <Link to={"/my-volunteer-need-post"}>My Volulnteer Need Posts</Link>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
+              : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+          }
+          to={"/my-volunteer-need-post"}
+        >
+          My Volulnteer Need Posts
+        </NavLink>
       )}
-      {user && <Link to={"/my-volunteer-request"}>My Volunteer Request</Link>}
+      {user && (
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
+              : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+          }
+          to={"/my-volunteer-request"}
+        >
+          My Volunteer Request
+        </NavLink>
+      )}
     </>
   );
   return (
@@ -53,9 +93,11 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
+
         <div className="navbar-end">
+          <ThemeToggle></ThemeToggle>
           {!user && (
-            <div>
+            <div className="ml-2">
               <ul className="flex gap-4">
                 <li>
                   <Link to={"/login"}>Login</Link>
@@ -67,7 +109,7 @@ const Navbar = () => {
             </div>
           )}
           {user && (
-            <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ">
+            <div className="dropdown dropdown-hover dropdown-bottom dropdown-end ml-2">
               <div tabIndex={0} role="button" className=" m-1">
                 <div
                   title={user?.displayName}

@@ -23,8 +23,8 @@ const AllVolunteerNeed = () => {
     <div>
       <div className="text-center mt-20 mb-10 ">
         <h2 className="text-4xl font-bold">
-          "Building Stronger <span className="text-[#2B7FFF]">Communities</span>
-          , One <br /> <span className="text-[#2B7FFF]">Volunteer</span> at a
+          "Building Stronger <span className="text-[#EB5971]">Communities</span>
+          , One <br /> <span className="text-[#EB5971]">Volunteer</span> at a
           Time ."
         </h2>
         <p className="text-gray-400 mt-8 text-2xl font-thin">

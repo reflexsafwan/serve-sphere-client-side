@@ -5,12 +5,13 @@ import "react-tabs/style/react-tabs.css";
 import MyVolunteerNeedPosts from "./MyVolunteerNeedPosts";
 import MyVolunteerRequest from "./MyVolunteerRequest";
 
-
 const ManageMyPost = () => {
   return (
-  
     <div>
-      <MyVolunteerNeedPosts></MyVolunteerNeedPosts>
+      <div>
+        
+        <MyVolunteerNeedPosts></MyVolunteerNeedPosts>
+      </div>
 
       <MyVolunteerRequest></MyVolunteerRequest>
     </div>

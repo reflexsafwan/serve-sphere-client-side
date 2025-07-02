@@ -17,7 +17,7 @@ const VolunteerPostsForHome = () => {
         }
       })
       .catch((err) => console.log(err));
-  }, [VolunteerNeedsData, showAll]);
+  }, [showAll]);
 
   //   useEffect(() => {
   //     if (showAll) {
@@ -27,15 +27,15 @@ const VolunteerPostsForHome = () => {
   //     }
   //   }, [VolunteerNeedsData, showAll]);
 
-  // console.log(VolunteerNeedsData);
+  console.log(VolunteerNeedsData);
   return (
     <div>
       <div>
         <div className="text-center mt-20 mb-10 ">
           <h2 className="text-4xl font-bold">
             "Building Stronger{" "}
-            <span className="text-[#2B7FFF]">Communities</span>
-            , One <br /> <span className="text-[#2B7FFF]">Volunteer</span> at a
+            <span className="text-[#EB5971]">Communities</span>
+            , One <br /> <span className="text-[#EB5971]">Volunteer</span> at a
             Time ."
           </h2>
           <p className="text-gray-400 mt-8 text-2xl font-thin">
@@ -55,7 +55,7 @@ const VolunteerPostsForHome = () => {
         </div>
         <div className="flex justify-center ">
           <button
-            className="btn mb-4 bg-blue-700 hover:bg-blue-500 w-xl font-bold text-xl"
+            className="btn mb-4 bg-[#EB5971] hover:bg-[#EB5971] w-xl font-bold text-xl"
             onClick={() => setShowAll((prv) => !prv)}
           >
             {showAll ? "Show Less" : "Show All"}
