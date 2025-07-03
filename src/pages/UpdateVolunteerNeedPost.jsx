@@ -7,16 +7,14 @@ import Swal from "sweetalert2";
 const UpdateVolunteerNeedPost = () => {
   const { user } = useContext(AuthContext);
   const data = useLoaderData();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const {
     category,
     thumbnail,
     postTitle,
     location,
     deadline,
-    organizerName,
     volunteersNeeded,
-    organizerEmail,
     description,
     _id,
   } = data.data || {};
@@ -27,23 +25,21 @@ const UpdateVolunteerNeedPost = () => {
     const formData = new FormData(form);
     const UpdateVolunteerData = Object.fromEntries(formData.entries());
 
-    fetch(`${import.meta.env.VITE_API_URL}/update-volunteer-need-post/${_id}`,    {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(UpdateVolunteerData),
-      }
-    )
+    fetch(`${import.meta.env.VITE_API_URL}/update-volunteer-need-post/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(UpdateVolunteerData),
+    })
       .then((res) => res.json())
       .then((data) => {
- 
         Swal.fire({
           title: "Good job!",
           text: "Post Updated succesfully",
           icon: "success",
         });
-        navigate('/my-volunteer-need-post')
+        navigate("/my-volunteer-need-post");
       });
   };
 
