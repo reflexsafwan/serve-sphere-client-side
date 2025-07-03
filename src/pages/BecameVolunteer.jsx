@@ -80,7 +80,7 @@ const BecameVolunteer = () => {
               </div> */}
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-sm">
-                  Post Title
+                 Catagory
                 </label>
                 <input
                   readOnly
