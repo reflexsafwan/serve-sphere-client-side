@@ -1,6 +1,6 @@
 # SurveSphere 🌍
 
-[🔗 Live Site]([https://your-live-link.com](https://servesphere-a93b8.web.app/))
+[🔗 Live Site]([https://your-live-link.com](https://servesphere-a93b8.web.app/)])
 
 ## 📝 Project Overview
 
@@ -44,5 +44,5 @@ Users can:
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/your-username/volunteer-connect.git
+git clone [(https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-reflexsafwan)]
 cd volunteer-connect](https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-reflexsafwan)
