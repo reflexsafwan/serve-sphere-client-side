@@ -1,12 +1,48 @@
-# React + Vite
+# SurveSphere 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[🔗 Live Site]([https://your-live-link.com](https://servesphere-a93b8.web.app/))
 
-Currently, two official plugins are available:
+## 📝 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Volunteer Connect** is a full-stack web application where users can post volunteer opportunities and also sign up to become volunteers. This platform bridges the gap between those who want to serve and those who need support.
 
-## Expanding the ESLint configuration
+Users can:
+- 📢 Post new volunteer events or campaigns
+- 🤝 Join as volunteers for any listed event
+- 🔐 Register/Login with Firebase authentication (Google Sign-in & Password)
+- 🎭 Use protected routes with JWT
+- 🌙 Toggle between Dark and Light theme
+- 📱 Enjoy fully responsive UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tech Stack
+
+| Frontend       | Backend        | Other Tools         |
+|----------------|----------------|---------------------|
+| React          | Node.js (API)  | Firebase Auth       |
+| Tailwind CSS   | Express.js     | SweetAlert2         |
+| DaisyUI        | MongoDB        | Framer Motion       |
+| React Router   | JWT Auth       | Swiper Slider       |
+
+---
+
+## 📸 Features
+
+- 🔐 Firebase Authentication (Google login, Email/password, Password reset)
+- 🧾 JWT-based secure API access
+- 🧑‍🤝‍🧑 Volunteer registration system
+- 📬 Post, view, and delete volunteer posts
+- 🎨 Responsive and theme-switching UI
+- ✨ Animations using Framer Motion
+- 🔄 Swiper.js Slider Integration
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/your-username/volunteer-connect.git
+cd volunteer-connect](https://github.com/Programming-Hero-Web-Course4/b11a11-client-side-reflexsafwan)
