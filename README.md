@@ -1,6 +1,6 @@
 # SurveSphere 🌍
 
-[🔗 Live Site]([https://your-live-link.com](https://servesphere-a93b8.web.app/)])
+[🔗 Live Site](https://servesphere-a93b8.web.app/)
 
 ## 📝 Project Overview
 
