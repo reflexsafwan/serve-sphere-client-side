@@ -9,7 +9,7 @@ const ManageMyPost = () => {
   return (
     <div>
       <div>
-        <div className="text-center mb-10 ">
+        <div className="text-center  ">
           <h2 className="text-2xl font-bold">
             MY 
             <span className="text-[#EB5971]"> volunteer Needs </span> Posts
@@ -24,7 +24,7 @@ const ManageMyPost = () => {
       </div>
 
       <div>
-        <div className="text-center mt-4 mb-10 ">
+        <div className="text-center mt-2  ">
           <h2 className="text-2xl font-bold">
             MY
             <span className="text-[#EB5971]"> volunteer </span>

@@ -20,14 +20,13 @@ const BecameVolunteer = () => {
     organizerEmail,
     _id,
   } = data.data || {};
- 
+
   const handleVolunteer = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const volunteer = Object.fromEntries(formData.entries());
     volunteer.postId = _id;
- 
 
     axios
       .post(`${import.meta.env.VITE_API_URL}/volunteers`, volunteer)
@@ -61,7 +60,7 @@ const BecameVolunteer = () => {
             </div>
 
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-              <div className="col-span-full sm:col-span-3">
+              {/* <div className="col-span-full sm:col-span-3">
                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Select Your Volunteer Category
                 </label>
@@ -78,7 +77,23 @@ const BecameVolunteer = () => {
                   <option>education</option>
                   <option>social service</option>
                 </select>
+              </div> */}
+              <div className="col-span-full sm:col-span-3">
+                <label htmlFor="firstname" className="text-sm">
+                  Post Title
+                </label>
+                <input
+                  readOnly
+                  required
+                  defaultValue={category}
+                  name="category"
+                  id="firstname"
+                  type="text"
+                  placeholder="select Your catagory"
+                  className="w-full px-4 py-2 rounded-md border border-gray-300 bg-white text-gray-900 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
+                />
               </div>
+
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-sm">
                   Post Title
