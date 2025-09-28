@@ -11,8 +11,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
-            : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+            ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg text-base "
+            : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg text-base "
         }
         to={"/"}
       >
@@ -21,8 +21,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
-            : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+            ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  text-base "
+            : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg text-base"
         }
         to={"/all-volunteer-need-posts"}
       >
@@ -33,8 +33,8 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
-              : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+              ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg text-base  "
+              : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg text-base "
           }
           to={"/my-volunteer-need-post"}
         >
@@ -45,8 +45,8 @@ const Navbar = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg  "
-              : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg "
+              ? "bg-[#ED4C67] text-white px-3 py-2 rounded-lg text-base "
+              : "hover:bg-[#ED4C67] hover:text-white px-3 py-2 rounded-lg text-base"
           }
           to={"/my-volunteer-request"}
         >
