@@ -14,36 +14,6 @@ const SingleVolunteerNeed = ({ post }) => {
   } = post || {};
 
   return (
-    // <div>
-    //   <div
-    //     className=" rounded-md shadow-md bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800"
-    //     bis_skin_checked="1"
-    //   >
-    //     <img
-    //       src={thumbnail}
-    //       alt=""
-    //       className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500 dark:bg-gray-500"
-    //     />
-    //     <div
-    //       className="flex flex-col justify-between p-6 space-y-8"
-    //       bis_skin_checked="1"
-    //     >
-    //       <div className="space-y-2" bis_skin_checked="1">
-    //         <h2 className="text-3xl font-semibold tracking-wide">{category}</h2>
-    //         <p className="text-gray-100 dark:text-gray-800">
-    //           Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.
-    //         </p>
-    //       </div>
-    //       <button
-    //         type="button"
-    //         className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50"
-    //       >
-    //         Read more
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
-
     // merakiUi
 
     <div className="w-full overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 dark:bg-gray-00 light:bg-gray-50 dark:text-gray-600">
@@ -55,16 +25,42 @@ const SingleVolunteerNeed = ({ post }) => {
 
       <div className="flex items-center px-6 py-3 bg-gray-900">
         <svg
-          aria-label="headphones icon"
-          className="w-6 h-6 text-white fill-current"
-          viewBox="0 0 24 24"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          width={20}
+          height={20}
+          role="img"
+          aria-labelledby="title desc"
         >
+          <title id="title">Volunteers Needed</title>
+          <desc id="desc">
+            Two raised hands with hearts symbolizing volunteer help and kindness
+          </desc>
+
+          {/* Left hand */}
           <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M17 21C15.8954 21 15 20.1046 15 19V15C15 13.8954 15.8954 13 17 13H19V12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12V13H7C8.10457 13 9 13.8954 9 15V19C9 20.1046 8.10457 21 7 21H3V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12V21H17ZM19 15H17V19H19V15ZM7 15H5V19H7V15Z"
+            d="M100 380 C90 300 90 180 100 120 C110 70 180 70 190 120 V380 Z"
+            fill="#c68642"
+          />
+          <rect x="90" y="380" width="120" height="80" fill="#93c5fd" />
+
+          {/* Right hand */}
+          <path
+            d="M300 380 C290 280 290 140 300 80 C310 40 380 40 390 80 V380 Z"
+            fill="#f9d7b7"
+          />
+          <rect x="290" y="380" width="120" height="80" fill="#d1d5db" />
+
+          {/* Heart on hand */}
+          <path
+            d="M380 380 c-20-30-60-20-60 10 0 30 60 60 60 60s60-30 60-60c0-30-40-40-60-10z"
+            fill="#ef4444"
+          />
+
+          {/* Floating heart */}
+          <path
+            d="M240 60 c-20-30-60-20-60 10 0 30 60 60 60 60s60-30 60-60c0-30-40-40-60-10z"
+            fill="#f87171"
           />
         </svg>
         <h1 className="mx-3 text-lg font-semibold text-white">
@@ -136,9 +132,8 @@ const SingleVolunteerNeed = ({ post }) => {
         </div>
         <motion.div
           initial={{ x: -100 }}
-        
-          transition={{ type: "spring", stiffness: 120, delay: 0.2,}}
-          whileInView={{x:0,}}
+          transition={{ type: "spring", stiffness: 120, delay: 0.2 }}
+          whileInView={{ x: 0 }}
         >
           <Link
             to={`/all-volunteer-Need/${_id}`}
