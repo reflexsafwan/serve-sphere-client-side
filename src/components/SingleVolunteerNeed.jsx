@@ -16,7 +16,7 @@ const SingleVolunteerNeed = ({ post }) => {
   return (
     // merakiUi
 
-    <div className="w-full overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800 dark:bg-gray-00 light:bg-gray-50 dark:text-gray-600">
+    <div className="w-full overflow-hidden  rounded-lg shadow-lg dark:bg-blue-600 bg-red   dark:text-gray-200">
       <img
         className="object-cover object-center w-full h-56"
         src={thumbnail}
@@ -69,12 +69,12 @@ const SingleVolunteerNeed = ({ post }) => {
       </div>
 
       <div className="px-6 py-4">
-        <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
+        <h1 className="text-xl font-semibold ">
           {category}
         </h1>
-        <p className="py-2 text-gray-700 dark:text-gray-400">{postTitle}</p>
+        <p className="py-2 ">{postTitle}</p>
 
-        <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
+        <div className="flex items-center mt-4 ">
           <svg
             aria-label="suitcase icon"
             className="w-6 h-6 fill-current"
@@ -92,7 +92,7 @@ const SingleVolunteerNeed = ({ post }) => {
           <h1 className="px-2 text-sm">{description}</h1>
         </div>
 
-        <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
+        <div className="flex items-center mt-4 ">
           <svg
             aria-label="location pin icon"
             className="w-6 h-6 fill-current"
@@ -114,7 +114,7 @@ const SingleVolunteerNeed = ({ post }) => {
           <h1 className="px-2 text-sm">{location}</h1>
         </div>
 
-        <div className="flex items-center mt-4 text-gray-700 dark:text-gray-200">
+        <div className="flex items-center mt-4 ">
           <svg
             aria-label="email icon"
             className="w-6 h-6 fill-current"
