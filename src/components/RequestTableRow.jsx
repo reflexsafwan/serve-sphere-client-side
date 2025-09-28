@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+
 import { AuthContext } from "../context/Authcontext";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
 
 const RequestTableRow = ({ rqst, handleDelete }) => {
-  const { user } = useContext(AuthContext);
+
   const {
     category,
     deadline,
@@ -13,8 +13,6 @@ const RequestTableRow = ({ rqst, handleDelete }) => {
     organizerName,
     postTitle,
     status,
-    volunteerEmail,
-    volunteerName,
     thumbnail,
     _id,
   } = rqst || {};
@@ -64,7 +62,7 @@ const RequestTableRow = ({ rqst, handleDelete }) => {
         </td>
         <td className="px-4 py-4 text-sm whitespace-nowrap">
           <div className="flex items-center gap-x-2">
-            <p className="px-3 py-1 text-xs text-indigo-500 rounded-full dark:bg-gray-800 bg-indigo-100/60">
+            <p className="px-3 py-1 text-xs text-[#ED4C67] rounded-full dark:bg-gray-800 bg-indigo-100/60">
               {status}
             </p>
           </div>

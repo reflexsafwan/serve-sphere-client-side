@@ -38,7 +38,7 @@ const VolunteerPostsForHome = () => {
             , One <br /> <span className="text-[#EB5971]">Volunteer</span> at a
             Time ."
           </h2>
-          <p className="text-gray-400 mt-8 text-2xl font-thin">
+          <p className=" mt-8 text-2xl font-thin">
             Authoritatively create covalent materials and innovative results.{" "}
             <br />
             Continually disseminate alternative ROI rather than.

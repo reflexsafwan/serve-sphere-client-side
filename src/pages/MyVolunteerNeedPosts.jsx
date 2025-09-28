@@ -65,7 +65,7 @@ const MyVolunteerNeedPosts = () => {
             <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
               <div className="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 ">
-                  <thead className="bg-gray-50 dark:bg-gray-800 ">
+                  <thead className="">
                     <tr className="">
                       <th
                         scope="col"
