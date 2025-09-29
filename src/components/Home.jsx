@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import ImpactSection from "./ImpactSection";
 
 import VolunteerPostsForHome from "./VolunteerPostsForHome";
+import VolunteerStories from "./VolunteerStories";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <VolunteerPostsForHome></VolunteerPostsForHome>
       <ContactSection></ContactSection>
       <ImpactSection></ImpactSection>
+      <VolunteerStories></VolunteerStories>
       <Footer></Footer>
     </div>
   );

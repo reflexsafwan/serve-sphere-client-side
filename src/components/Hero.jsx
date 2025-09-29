@@ -6,7 +6,7 @@ import { motion, spring } from "motion/react";
 const Hero = () => {
   return (
     <>
-      <div className="dark:bg-gray-00 light:bg-gray-50 dark:text-gray-600">
+      <div className="">
         <div className="container px-6 py-16 mx-auto">
           <div className="items-center lg:flex">
             <div className="w-full lg:w-1/2">
@@ -28,7 +28,7 @@ const Hero = () => {
                   <span className="text-[#FF637D]"> Lifeline</span>
                 </motion.h1>
 
-                <p className="mt-3 text-gray-600 dark:text-gray-400">
+                <p className="mt-3">
                   We’re seeking passionate volunteers to support meaningful
                   causes. Be the reason someone smiles. Help us make a real
                   difference
