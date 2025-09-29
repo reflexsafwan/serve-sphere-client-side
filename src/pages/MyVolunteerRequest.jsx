@@ -51,21 +51,21 @@ const MyVolunteerRequest = () => {
     });
   };
   if (myRequest.length === 0) {
-    return <NoDataFound></NoDataFound>
+    return <NoDataFound></NoDataFound>;
   }
 
   return (
-    <section className="container px-4 mx-auto">
+    <section className="container  px-4 mx-auto ">
       <div className="flex flex-col mt-6">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
             <div className="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                <thead className=" dark:bg-gray-800">
+              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 ">
+                <thead className="">
                   <tr>
                     <th
                       scope="col"
-                      className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right "
                     >
                       <div className="flex items-center gap-x-3">
                         <span>Organizer Info</span>
@@ -73,7 +73,7 @@ const MyVolunteerRequest = () => {
                     </th>
                     <th
                       scope="col"
-                      className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right"
                     >
                       <button className="flex items-center gap-x-2">
                         <span>Catagory</span>
@@ -81,7 +81,7 @@ const MyVolunteerRequest = () => {
                     </th>
                     <th
                       scope="col"
-                      className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right"
                     >
                       <button className="flex items-center gap-x-2">
                         <span>Post Title</span>
@@ -90,7 +90,7 @@ const MyVolunteerRequest = () => {
 
                     <th
                       scope="col"
-                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right "
                     >
                       <button className="flex items-center gap-x-2">
                         <span>Location</span>
@@ -99,14 +99,14 @@ const MyVolunteerRequest = () => {
 
                     <th
                       scope="col"
-                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right "
                     >
                       Deadline
                     </th>
 
                     <th
                       scope="col"
-                      class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right"
                     >
                       <button class="flex items-center gap-x-2">
                         <span>Status</span>
@@ -144,7 +144,7 @@ const MyVolunteerRequest = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                <tbody className=" divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                   {myRequest?.map((rqst) => (
                     <RequestTableRow
                       rqst={rqst}

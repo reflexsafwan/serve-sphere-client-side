@@ -120,7 +120,7 @@ const MyVolunteerNeedPosts = () => {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                  <tbody className=" divide-y divide-gray-200 dark:divide-gray-700">
                     {myPosts?.map((post) => (
                       <TableRow
                         handleDelete={handleDelete}

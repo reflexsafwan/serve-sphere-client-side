@@ -20,8 +20,8 @@ const RequestTableRow = ({ rqst, handleDelete }) => {
 
   return (
     <>
-      <tr>
-        <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
+      <tr className="">
+        <td className="px-4 py-4 text-sm font-medium  whitespace-nowrap ">
           <div className="inline-flex items-center gap-x-3">
             <div className="flex items-center gap-x-2">
               <img
@@ -30,39 +30,39 @@ const RequestTableRow = ({ rqst, handleDelete }) => {
                 alt=""
               />
               <div>
-                <h2 className="font-medium text-gray-800 dark:text-white ">
+                <h2 className="font-medium  ">
                   {organizerName}
                 </h2>
-                <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
+                <p className="text-sm font-normal">
                   {organizerEmail}
                 </p>
               </div>
             </div>
           </div>
         </td>
-        <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-          <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+        <td className="px-12 py-4 text-sm font-medium  whitespace-nowrap">
+          <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2  dark:bg-gray-800">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
 
             <h2 className="text-sm font-normal text-emerald-500">{category}</h2>
           </div>
         </td>
-        <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-          <div className="inline-flex  items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+        <td className="px-12 py-4 text-sm font-medium  whitespace-nowrap">
+          <div className="inline-flex  items-center px-3 py-1 rounded-full gap-x-2  dark:bg-gray-800">
             <h2 className="text-sm font-normal text-emerald-500">
-              {postTitle.slice(0, 30)}
+              {postTitle.slice(0, 40)}
             </h2>
           </div>
         </td>
-        <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+        <td className="px-4 py-4 text-sm hitespace-nowrap">
           {location}
         </td>
-        <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+        <td className="px-4 py-4 text-sm   whitespace-nowrap">
           {deadline}
         </td>
         <td className="px-4 py-4 text-sm whitespace-nowrap">
           <div className="flex items-center gap-x-2">
-            <p className="px-3 py-1 text-xs text-[#ED4C67] rounded-full dark:bg-gray-800 bg-indigo-100/60">
+            <p className="px-3 py-1 text-xs text-[#ED4C67] rounded-full  ">
               {status}
             </p>
           </div>

@@ -44,40 +44,22 @@ const BecameVolunteer = () => {
 
   return (
     <>
-      <section className="p-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen">
+      <section className="p-6  min-h-screen ">
         <form
           onSubmit={handleVolunteer}
           className="container flex flex-col mx-auto space-y-12"
         >
           {/* Personal Information Section */}
-          <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800">
+          <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm  ">
             <div className="space-y-2 col-span-full lg:col-span-1">
-              <p className=" text-xl font-medium">Be the Help Someone Needs</p>
+              <p className=" text-xl font-medium ">Be the Help Someone Needs</p>
               <p className="text-sm font-thin ">
                 Join our mission to uplift lives. Your time, skills, and heart
                 can create lasting change. Volunteer today and inspire hope.
               </p>
             </div>
 
-            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
-              {/* <div className="col-span-full sm:col-span-3">
-                <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Select Your Volunteer Category
-                </label>
-                <select
-                  readOnly
-                  defaultValue={category}
-                  name="category"
-                  required
-                  id="countries"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                >
-                  <option>animal welfare</option>
-                  <option>healthcare</option>
-                  <option>education</option>
-                  <option>social service</option>
-                </select>
-              </div> */}
+            <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 ">
               <div className="col-span-full sm:col-span-3">
                 <label htmlFor="firstname" className="text-sm">
                  Catagory
@@ -218,7 +200,7 @@ const BecameVolunteer = () => {
           </fieldset>
 
           {/* Profile Section */}
-          <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800">
+          <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm ">
             <div className="space-y-2 col-span-full lg:col-span-1">
               <p className="font-medium">Volunteer Information</p>
               <p className="text-xs">"Volunteer Today. Impact Forever.</p>
@@ -290,7 +272,7 @@ const BecameVolunteer = () => {
 
                   <button
                     type="submit"
-                    className=" w-full px-2 md:px-4 py-1 md:py-2 text-sm md:text-xl border rounded-md border-blue-600 dark:border-gray-600 font-bold bg-[#EB5971] hover:bg-[#EB5971]  hover:border-[#EB5971]"
+                    className=" w-full px-2 md:px-4 py-1 md:py-2 text-sm md:text-xl  rounded-md font-bold bg-[#ef3d5b] hover:bg-[#8e2c3c]  hover:border-[#EB5971] hover:ease-in hover:duration-300"
                   >
                     Request to Became a Volunteer
                   </button>

@@ -44,13 +44,13 @@ const UpdateVolunteerNeedPost = () => {
   };
 
   return (
-    <section className="p-6 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen">
+    <section className="p-6 min-h-screen">
       <form
         onSubmit={handleUpdate}
         className="container flex flex-col mx-auto space-y-12"
       >
         {/* volunteer posts Information Section */}
-        <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800">
+        <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm  ">
           <div className="space-y-2 col-span-full lg:col-span-1">
             <p className=" text-xl font-medium">
               Volunteer Today. Impact Forever.
@@ -170,7 +170,7 @@ const UpdateVolunteerNeedPost = () => {
         </fieldset>
 
         {/* Profile Section */}
-        <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-100 dark:bg-gray-800">
+        <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm ">
           <div className="space-y-2 col-span-full lg:col-span-1">
             <p className="font-medium">Organizer Information</p>
             <p className="text-xs">"Be a Hero Without a Cape.</p>
@@ -213,7 +213,7 @@ const UpdateVolunteerNeedPost = () => {
                 />
                 <button
                   type="submit"
-                  className=" w-full px-4 py-2 border rounded-md border-blue-600 dark:border-gray-600 text-sm bg-blue-600 hover:bg-blue-500  hover:border-blue-500"
+                  className=" w-full px-4 py-2  rounded-md  text-sm bg-[#EB5971] hover:bg-[#b73148] hover:ease-in hover:duration-300 hover:text-xl"
                 >
                   Update Post
                 </button>

@@ -23,7 +23,7 @@ const TableRow = ({ post, handleDelete }) => {
   return (
     <>
       <tr>
-        <td className="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap ">
+        <td className="px-4 py-4 text-sm font-medium  whitespace-nowrap">
           <div className="inline-flex items-center gap-x-3">
             <div className="flex items-center gap-x-2">
               <img
@@ -32,39 +32,39 @@ const TableRow = ({ post, handleDelete }) => {
                 alt=""
               />
               <div>
-                <h2 className="font-medium text-gray-800 dark:text-white ">
+                <h2 className="font-medium  ">
                   {organizerName}
                 </h2>
-                <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
+                <p className="text-sm font-normal">
                   {organizerEmail}
                 </p>
               </div>
             </div>
           </div>
         </td>
-        <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-          <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+        <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
+          <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 ">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
 
             <h2 className="text-sm font-normal text-emerald-500">{category}</h2>
           </div>
         </td>
-        <td className="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-          <div className="inline-flex  items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+        <td className="px-12 py-4 text-sm font-medium  whitespace-nowrap">
+          <div className="inline-flex  items-center px-3 py-1 rounded-full gap-x-2">
             <h2 className="text-sm font-normal text-emerald-500">
               {postTitle.slice(0, 30)}
             </h2>
           </div>
         </td>
-        <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+        <td className="px-4 py-4 text-sm  whitespace-nowrap">
           {location}
         </td>
-        <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+        <td className="px-4 py-4 text-sm  whitespace-nowrap">
           {deadline}
         </td>
         <td className="px-4 py-4 text-sm whitespace-nowrap">
           <div className="flex items-center gap-x-2">
-            <p className="px-3 py-1 text-xs text-indigo-500 rounded-full dark:bg-gray-800 bg-indigo-100/60">
+            <p className="px-3 py-1 text-xs  rounded-full">
               {volunteersNeeded}
             </p>
           </div>
@@ -75,7 +75,7 @@ const TableRow = ({ post, handleDelete }) => {
               onClick={() => {
                 handleDelete(_id);
               }}
-              className="text-gray-500 transition-colors duration-200 dark:hover:text-red-500 dark:text-gray-300 hover:text-red-500 focus:outline-none"
+              className=" transition-colors duration-200  hover:text-red-500 focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ const TableRow = ({ post, handleDelete }) => {
 
             <Link to={`/update-volunteer-need-post/${_id}`}
              
-              className="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500 dark:text-gray-300 hover:text-yellow-500 focus:outline-none"
+              className=" transition-colors duration-200   hover:text-yellow-500 focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

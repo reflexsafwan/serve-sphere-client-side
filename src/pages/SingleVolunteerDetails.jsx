@@ -18,7 +18,7 @@ const SingleVolunteerDetails = () => {
   } = data.data || {};
 
   return (
-    <div className="p-4 md:p-6 lg:p-8">
+    <div className="p-4 md:p-6 lg:p-8 ">
       <div className="w-full   overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 ">
         <img
           className="object-cover object-center h-[350px] w-full "
