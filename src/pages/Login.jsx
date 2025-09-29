@@ -72,9 +72,9 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-12">
-      <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl ">
+      <div className="flex w-full max-w-sm mx-auto overflow-hidden rounded-lg shadow-lg  lg:max-w-4xl ">
         <div
-          className="hidden bg-cover bg-center lg:block lg:w-1/2"
+          className="hidden bg-cover bg-center  lg:block lg:w-1/2"
           style={{
             backgroundImage: `url(${login})`,
           }}
@@ -83,13 +83,13 @@ const Login = () => {
         <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
           <div className="flex justify-center mx-auto"></div>
 
-          <p className="mt-3 text-xl text-center text-gray-600 ">
+          <p className="mt-3 text-xl text-center  ">
             Welcome back!
           </p>
 
           <div
             onClick={handleGoogleSignIn}
-            className="flex cursor-pointer items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 "
+            className="flex cursor-pointer items-center justify-center mt-4  transition-colors duration-300 transform border rounded-lg   "
           >
             <div className="px-4 py-2">
               <svg className="w-6 h-6" viewBox="0 0 40 40">
@@ -120,7 +120,7 @@ const Login = () => {
           <div className="flex items-center justify-between mt-4">
             <span className="w-1/5 border-b  lg:w-1/4"></span>
 
-            <div className="text-xs text-center text-gray-500 uppercase  hover:underline">
+            <div className="text-xs text-center  uppercase  hover:underline">
               or login with email
             </div>
 
@@ -129,7 +129,7 @@ const Login = () => {
           <form onSubmit={handleSignIn}>
             <div className="mt-4">
               <label
-                className="block mb-2 text-sm font-medium text-gray-600 "
+                className="block mb-2 text-sm font-medium "
                 htmlFor="LoggingEmailAddress"
               >
                 Email Address
@@ -146,7 +146,7 @@ const Login = () => {
             <div className="mt-4">
               <div className="flex justify-between">
                 <label
-                  className="block mb-2 text-sm font-medium text-gray-600 "
+                  className="block mb-2 text-sm font-medium "
                   htmlFor="loggingPassword"
                 >
                   Password
@@ -176,7 +176,7 @@ const Login = () => {
 
             <Link
               to="/register"
-              className="text-xs text-gray-500 uppercase  hover:underline"
+              className="text-xs  uppercase  hover:underline"
             >
               or sign up
             </Link>
